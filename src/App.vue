@@ -1,35 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <Main />
+    <Navbar />
+    <Header />
     <Vitrina />
   </div>
 </template>
 
 <script>
-  import Main from "./components/Main.vue";
+  import "./styles/_variables.scss";
+  import Navbar from "./components/Navbar.vue";
+  import Header from "./components/Header.vue";
   import Vitrina from "./components/Vitrina.vue";
 
   export default {
     name: "App",
     components: {
-      Main,
+      Navbar,
+      Header,
       Vitrina
     }
   };
 </script>
 
-<style>
+<style lang="scss" scoped>
   body {
     margin: 0;
   }
   #app {
+    background: #e9ffb9;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #5f4118;
-    background-color: #e9ffb9;
     margin: 0;
   }
 </style>

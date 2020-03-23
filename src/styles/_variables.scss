@@ -1,0 +1,12 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+$primary: black;
+$primary-green: #578e44;
+$primary-background: #e9ffb9;
+$secondary-background: #fffaf0;
+$background-info: #fffaf0;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-vue/src/index.scss";
