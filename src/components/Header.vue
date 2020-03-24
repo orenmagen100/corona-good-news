@@ -1,16 +1,19 @@
 <template>
   <b-container class="header-container">
     <b-row>
-      <b-col cols="6">
+      <b-col cols="12" class="border-bottom border-primary">
         <div class="logo">
           <img alt="Vue logo" src="../assets/logo.png" />
+          <p class="main-title">
+            Recent Optimistic Articles From Today,
+            {{ today | moment("dddd, MMMM Do YYYY") }}
+          </p>
         </div>
       </b-col>
-      <b-col cols="6 p-6">
-        <p class="main-title">
-          Recent Optimistic Articles From Today,
-          {{ today | moment("dddd, MMMM Do YYYY") }}
-        </p>
+      <b-col cols="8 p-6">
+        <!-- <button class="why-positive btn btn-secondary btn-lg">
+          Why Positive?
+        </button> -->
       </b-col>
     </b-row>
   </b-container>
@@ -32,11 +35,11 @@
   @import "../styles/_variables.scss";
 
   .main-title {
-    padding: 12rem 3rem 0 3rem;
-    font-size: 1.5rem;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
+    font-size: 1.3rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.1rem;
+    }
   }
   .header-container {
     background: $primary-background;
@@ -44,5 +47,11 @@
   }
   .logo {
     padding-top: 3rem;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .why-positive {
+    margin-top: 8rem;
   }
 </style>

@@ -2,6 +2,7 @@
   <div id="app">
     <Navbar />
     <Header />
+    <LeadArticle />
     <Vitrina />
   </div>
 </template>
@@ -11,12 +12,14 @@
   import Navbar from "./components/Navbar.vue";
   import Header from "./components/Header.vue";
   import Vitrina from "./components/Vitrina.vue";
+  import LeadArticle from "./components/LeadArticle.vue";
 
   export default {
     name: "App",
     components: {
       Navbar,
       Header,
+      LeadArticle,
       Vitrina
     }
   };

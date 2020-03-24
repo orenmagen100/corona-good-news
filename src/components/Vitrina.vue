@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="articleWrapper">
-      <b-container>
-        <b-row>
+      <b-container fluid="md">
+        <b-row class="section-row">
           <b-col>
             <b-row>
-              <div class="d-flex mt-3 align-items-baseline">
+              <div class="d-flex mt-3 align-items-baseline section-title">
                 <p
                   class="section-category text-left pr-2"
                   @click="drugsLimit = null"
@@ -19,7 +19,7 @@
             </b-row>
 
             <b-row
-              class="border-bottom border-primary d-flex flex-row justify-content-star"
+              class="border-bottom border-primary d-flex justify-content-star article-row"
             >
               <ul
                 v-for="article in drugsObj"
@@ -46,8 +46,8 @@
           </b-col>
         </b-row>
       </b-container>
-      <b-container>
-        <b-row>
+      <b-container fluid="md">
+        <b-row class="section-row">
           <b-col>
             <b-row>
               <div
@@ -64,7 +64,7 @@
             </b-row>
 
             <b-row
-              class="border-bottom border-primary d-flex flex-row justify-content-star"
+              class="border-bottom border-primary d-flex justify-content-star article-row"
             >
               <ul
                 v-for="article in humanObj"
@@ -91,7 +91,7 @@
           </b-col>
         </b-row>
       </b-container>
-      <b-container>
+      <b-container class="section-row">
         <b-row>
           <b-col>
             <b-row>
@@ -109,7 +109,7 @@
             </b-row>
 
             <b-row
-              class="border-bottom border-primary d-flex flex-row justify-content-star"
+              class="border-bottom border-primary d-flex justify-content-star article-row"
             >
               <ul
                 v-for="article in ecoObj"
@@ -236,6 +236,9 @@
   }
   .article {
     max-width: 30%;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
   }
   .section-category {
     cursor: pointer;
@@ -247,5 +250,18 @@
   }
   .right-arrow-more {
     color: $primary-green;
+  }
+  .article-row {
+    flex-direction: row;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+  .section-row {
+    @include media-breakpoint-down(sm) {
+      padding-left: 2rem;
+    }
+  }
+  .section-title {
   }
 </style>

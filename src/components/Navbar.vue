@@ -2,13 +2,14 @@
   <b-container class="nav-container full-width">
     <div>
       <b-navbar toggleable="lg" type="dark" variant="dark">
-        <b-navbar-brand href="#">The Optimistic Corona News</b-navbar-brand>
+        <b-navbar-brand href="#">Home</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" class="ml-2" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="#">Why Optimism</b-nav-item>
+            <b-nav-item href="#">Why Think Positive?</b-nav-item>
+            <b-nav-item href="#">Recommended Content</b-nav-item>
             <b-nav-item href="#">About</b-nav-item>
           </b-navbar-nav>
 
