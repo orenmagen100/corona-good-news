@@ -2,6 +2,12 @@
   <div class="lead-container">
     <b-container class="py-5 border-bottom border-primary">
       <b-row>
+        <p class="main-title">
+          Recent Optimistic Articles From Today,
+          {{ today | moment("dddd, MMMM Do YYYY") }}
+        </p>
+      </b-row>
+      <b-row>
         <b-col cols="4" class="mt-3 text-left">
           <p class="source">
             OLIVIA BLAIR - ELLE NEWS
@@ -35,6 +41,11 @@
 <script>
   export default {
     name: "LeadArticle",
+    data() {
+      return {
+        today: new Date()
+      };
+    },
     methods: {
       goToArticle() {
         window.open(
@@ -46,6 +57,8 @@
   };
 </script>
 <style lang="scss" scoped>
+  @import "../styles/_variables.scss";
+
   .lead-container {
     background: #fffaf0;
   }
@@ -57,5 +70,12 @@
   }
   .title {
     font-size: 1.4rem;
+  }
+  .main-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.1rem;
+    }
   }
 </style>

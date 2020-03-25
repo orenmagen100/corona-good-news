@@ -4,10 +4,6 @@
       <b-col cols="12" class="border-bottom border-primary">
         <div class="logo">
           <img alt="Vue logo" src="../assets/logo.png" />
-          <p class="main-title">
-            Recent Optimistic Articles From Today,
-            {{ today | moment("dddd, MMMM Do YYYY") }}
-          </p>
         </div>
       </b-col>
       <b-col cols="8 p-6">
@@ -34,13 +30,6 @@
 <style lang="scss" scoped>
   @import "../styles/_variables.scss";
 
-  .main-title {
-    font-weight: bold;
-    font-size: 1.3rem;
-    @include media-breakpoint-down(sm) {
-      font-size: 1.1rem;
-    }
-  }
   .header-container {
     background: $primary-background;
     color: black;
