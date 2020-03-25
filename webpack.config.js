@@ -56,5 +56,10 @@ module.exports = {
     },
     extensions: ["*", ".js", ".vue", ".json"]
   },
-  plugins: [new VueLoaderPlugin(), new HtmlWebpackPlugin()]
+  plugins: [
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./index.html"
+    })
+  ]
 };
