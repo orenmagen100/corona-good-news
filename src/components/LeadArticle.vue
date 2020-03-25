@@ -1,6 +1,6 @@
 <template>
   <div class="lead-container">
-    <b-container class="py-3 border-bottom border-primary">
+    <b-container class="py-5 border-bottom border-primary">
       <b-row>
         <b-col cols="4" class="mt-3 text-left">
           <p class="source">
@@ -47,7 +47,7 @@
 </script>
 <style lang="scss" scoped>
   .lead-container {
-    background: #e9ffb9;
+    background: #fffaf0;
   }
   .imageWrapper {
     cursor: pointer;

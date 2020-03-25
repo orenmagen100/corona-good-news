@@ -1,6 +1,6 @@
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
-const nodeExternals = require("webpack-node-externals");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -11,11 +11,14 @@ module.exports = {
     publicPath: "/",
     filename: "[name].bundle.js"
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   devServer: {
     contentBase: path.resolve(__dirname, "public")
   },
-  target: "node", // in order to ignore built-in modules like path, fs, etc.
-  externals: [nodeExternals()],
   module: {
     rules: [
       {
@@ -45,16 +48,13 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    splitChunks: {
-      chunks: "all"
-    }
-  },
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.esm.js"
+      vue$: "vue/dist/vue.esm.js",
+      styles: path.resolve(__dirname, "src/styles/components"),
+      src: path.resolve(__dirname, "src")
     },
     extensions: ["*", ".js", ".vue", ".json"]
   },
-  plugins: [new VueLoaderPlugin()]
+  plugins: [new VueLoaderPlugin(), new HtmlWebpackPlugin()]
 };
