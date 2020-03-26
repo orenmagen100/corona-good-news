@@ -32,6 +32,16 @@ module.exports = {
           "style-loader",
           // Translates CSS into CommonJS
           "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: function() {
+                // post css plugins, can be exported to postcss.config.js
+                return [require("autoprefixer")];
+              }
+            }
+          },
           // Compiles Sass to CSS
           "sass-loader"
         ]
