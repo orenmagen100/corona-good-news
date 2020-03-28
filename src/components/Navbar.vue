@@ -10,8 +10,7 @@
           <b-navbar-nav>
             <b-nav-item href="#whyPositive">Why Positive?</b-nav-item>
             <b-nav-item href="#about">About</b-nav-item>
-            <b-nav-item
-              href="https://github.com/orenmagen100/corona-good-news-server/"
+            <b-nav-item href="https://github.com/orenmagen100/corona-good-news"
               >Contribute Code</b-nav-item
             >
             <b-nav-item
