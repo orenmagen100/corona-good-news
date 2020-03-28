@@ -160,7 +160,6 @@
         let data = await response.json();
         this.finishedLoading = true;
         this.searchArticles = data.articles;
-        console.log(this.searchArticles);
       }
     }
   };

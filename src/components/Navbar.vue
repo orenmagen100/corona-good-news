@@ -90,6 +90,7 @@
         );
       },
       onNavigate() {
+        console.log("navigated");
         this.$root.$emit("navigate");
       },
       onSubmit(evt) {
