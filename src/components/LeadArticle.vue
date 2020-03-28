@@ -7,8 +7,8 @@
           {{ today | moment("dddd, MMMM Do YYYY") }}
         </p>
       </b-row>
-      <b-row>
-        <b-col cols="4" class="mt-3 text-left">
+      <b-row class="lead-wrapper">
+        <b-col cols="12" md="4" class="mt-3 text-left">
           <p class="source">
             OLIVIA BLAIR - ELLE NEWS
           </p>
@@ -64,6 +64,9 @@
   }
   .imageWrapper {
     cursor: pointer;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
   .source {
     font-size: 0.7rem;
@@ -75,7 +78,13 @@
     font-weight: bold;
     font-size: 1.3rem;
     @include media-breakpoint-down(sm) {
+      padding: 1.2rem;
       font-size: 1.1rem;
+    }
+  }
+  .lead-wrapper {
+    @include media-breakpoint-down(sm) {
+      flex-direction: column-reverse;
     }
   }
 </style>

@@ -5,21 +5,27 @@
     <main>
       <router-view></router-view>
     </main>
+    <Footer />
   </div>
 </template>
 <script>
   import "./styles/_variables.scss";
   import Navbar from "./components/Navbar.vue";
   import Header from "./components/Header.vue";
+  import Footer from "./components/Footer.vue";
   export default {
     name: "App",
     components: {
       Navbar,
-      Header
+      Header,
+      Footer
     }
   };
 </script>
 <style lang="scss" scoped>
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
   }

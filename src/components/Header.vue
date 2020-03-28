@@ -6,11 +6,6 @@
           <img alt="Vue logo" src="../assets/logo.png" />
         </div>
       </b-col>
-      <b-col cols="8 p-6">
-        <!-- <button class="why-positive btn btn-secondary btn-lg">
-          Why Positive?
-        </button> -->
-      </b-col>
     </b-row>
   </b-container>
 </template>
