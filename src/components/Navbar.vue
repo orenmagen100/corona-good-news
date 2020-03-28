@@ -95,14 +95,6 @@
       onSubmit(evt) {
         evt.preventDefault();
         this.$root.$emit("search", this.form);
-      },
-      scrollIntoView(evt) {
-        evt.preventDefault();
-        const href = evt.target.getAttribute("href");
-        const el = href ? document.querySelector(href) : null;
-        if (el) {
-          this.$refs.content.scrollTop = el.offsetTop;
-        }
       }
     }
   };
