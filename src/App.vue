@@ -19,6 +19,27 @@
       Navbar,
       Header,
       Footer
+    },
+    metaInfo() {
+      return {
+        title: "Corona Good News Engine",
+        titleTemplate: null,
+        meta: [
+          { property: "og:title", content: "Corona Good News Engine" },
+          { property: "og:site_name", content: "Corona Positive News" },
+          { property: "og:type", content: "website" },
+          {
+            property: "og:image",
+            content:
+              "https://www.cleanenergywire.org/sites/default/files/styles/gallery_image/public/forest.jpg?itok=3gsemDb3"
+          },
+          {
+            property: "og:description",
+            content:
+              "A cov-19 positive news engine that searches for good hopeful articles"
+          }
+        ]
+      };
     }
   };
 </script>
