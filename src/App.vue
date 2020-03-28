@@ -3,7 +3,7 @@
     <Navbar />
     <Header />
     <main>
-      <router-view></router-view>
+      <router-view />
     </main>
     <Footer />
   </div>
@@ -23,9 +23,6 @@
   };
 </script>
 <style lang="scss" scoped>
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     margin: 0;
   }
