@@ -1,6 +1,7 @@
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "production",
@@ -85,6 +86,7 @@ module.exports = {
     extensions: ["*", ".js", ".vue", ".json"]
   },
   plugins: [
+    new webpack.HashedModuleIdsPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: "The Optimistic Corona News",
