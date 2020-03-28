@@ -71,7 +71,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "The Optimistic Corona News",
       template: "./index.html",
-      favicon: "/static/favicon.png"
+      favicon: "./src/static/favicon.png"
     })
   ]
 };
