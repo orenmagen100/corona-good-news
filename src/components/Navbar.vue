@@ -15,7 +15,7 @@
             >
             <b-nav-item
               href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TQE93CNS3GG4J"
-              >Buy Me A Hand-Sanitizer</b-nav-item
+              >Buy Me A Hand-Sanitizer!</b-nav-item
             >
             <div v-on:click="buyMe">
               <img
@@ -33,7 +33,7 @@
                 size="md"
                 class="mr-sm-2"
                 v-model="form.searchInput"
-                placeholder="Search Articles in..."
+                placeholder="Search Keywords"
               ></b-form-input>
               <div class="mx-1 grey-col">
                 Lang:
