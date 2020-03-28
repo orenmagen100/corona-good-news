@@ -69,7 +69,9 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      title: "The Optimistic Corona News",
+      template: "./index.html",
+      favicon: "/static/favicon.png"
     })
   ]
 };
